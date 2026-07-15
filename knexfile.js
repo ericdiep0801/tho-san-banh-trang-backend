@@ -20,12 +20,18 @@ module.exports = {
   },
   production: {
     client: 'mysql2',
-    connection: {
-      uri: process.env.DATABASE_URL,
-      ssl: {
-        rejectUnauthorized: true
-      }
-    },
+    connection: (() => {
+      if (!process.env.DATABASE_URL) return {};
+      const url = new URL(process.env.DATABASE_URL);
+      return {
+        host: url.hostname,
+        port: url.port || 3306,
+        user: url.username,
+        password: url.password,
+        database: url.pathname.replace(/^\//, ''),
+        ssl: { rejectUnauthorized: false } // Phù hợp với Aiven MySQL
+      };
+    })(),
     pool: {
       min: 2,
       max: 10
