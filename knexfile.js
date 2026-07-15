@@ -21,6 +21,10 @@ module.exports = {
   production: {
     client: 'mysql2',
     connection: (() => {
+      console.log('--- DEBUG INFO ---');
+      console.log('DATABASE_URL is:', process.env.DATABASE_URL ? (process.env.DATABASE_URL.substring(0, 20) + '... (MASKED)') : 'UNDEFINED OR EMPTY!!!');
+      console.log('------------------');
+      
       if (!process.env.DATABASE_URL) return {};
       const url = new URL(process.env.DATABASE_URL);
       return {
