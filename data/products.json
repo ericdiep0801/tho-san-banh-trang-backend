@@ -1,0 +1,34 @@
+[
+  {
+    "id": "p1",
+    "name": "Bánh Tráng Sa Tế Tỏi (Bịch Zip)",
+    "description": "Bánh tráng xé sẵn, thấm đẫm vị sa tế cay nồng và tỏi phi giòn rụm. Đóng gói tiện lợi hút chân không.",
+    "price": 20000,
+    "image": "assets/hero_bag.png",
+    "category": "Cay nồng"
+  },
+  {
+    "id": "p2",
+    "name": "Bánh Tráng Phô Mai Lắc",
+    "description": "Vị phô mai mặn mặn béo ngậy, bánh tráng giòn tan. Snack tuyệt vời cho mọi lứa tuổi.",
+    "price": 25000,
+    "image": "assets/cuon_bag.png",
+    "category": "Béo ngậy"
+  },
+  {
+    "id": "p3",
+    "name": "Bánh Tráng Khô Gà Lá Chanh",
+    "description": "Sự kết hợp hoàn hảo giữa bánh tráng dai dai và khô gà lá chanh thơm lừng.",
+    "price": 28000,
+    "image": "",
+    "category": "Đặc biệt"
+  },
+  {
+    "id": "p4",
+    "name": "Bánh Tráng Cuộn Bơ Muối Nhuyễn",
+    "description": "Cuộn bơ vàng óng, rắc muối tôm nhuyễn cay cay mằn mặn, ăn là ghiền.",
+    "price": 22000,
+    "image": "",
+    "category": "Béo ngậy"
+  }
+]
