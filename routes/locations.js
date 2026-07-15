@@ -31,11 +31,13 @@ router.post('/', async (req, res) => {
       return res.status(400).json({ message: 'Missing required fields' });
     }
 
-    // Determine max ID (if IDs are integers stored as strings)
-    const locations = await db.knex('locations').select('id');
+    // Determine max ID and max locationNumber
+    const locations = await db.knex('locations').select('id', 'locationNumber');
     const maxId = locations.length > 0 ? Math.max(...locations.map(l => parseInt(l.id) || 0)) : 0;
-    newLocation.id = (maxId + 1).toString();
+    const maxLocationNumber = locations.length > 0 ? Math.max(...locations.map(l => l.locationNumber || 0)) : 0;
     
+    newLocation.id = (maxId + 1).toString();
+    newLocation.locationNumber = maxLocationNumber + 1;
     if (!newLocation.rating) newLocation.rating = 0;
     if (!newLocation.images) newLocation.images = [];
     

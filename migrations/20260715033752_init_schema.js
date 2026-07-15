@@ -6,6 +6,7 @@ exports.up = async function(knex) {
   // Locations table ONLY
   await knex.schema.createTable('locations', table => {
     table.string('id').primary();
+    table.integer('locationNumber').notNullable().defaultTo(0);
     table.string('name').notNullable();
     table.float('lat', 10, 6);
     table.float('lng', 10, 6);

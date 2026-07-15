@@ -1,6 +1,7 @@
 [
   {
     "id": "1",
+    "locationNumber": 1,
     "name": "Bánh Tráng Trộn Chú Viên",
     "lat": 10.762622,
     "lng": 106.681121,
@@ -13,6 +14,7 @@
   },
   {
     "id": "2",
+    "locationNumber": 2,
     "name": "Bánh Tráng Trộn Cô Long",
     "lat": 10.761502,
     "lng": 106.680012,
@@ -25,6 +27,7 @@
   },
   {
     "id": "3",
+    "locationNumber": 3,
     "name": "Bánh Tráng Cuốn Trứng Cút - Hồ Con Rùa",
     "lat": 10.782807,
     "lng": 106.695392,
@@ -38,6 +41,7 @@
   },
   {
     "id": "4",
+    "locationNumber": 4,
     "name": "Bánh Tráng Trộn Dì Hồng",
     "lat": 10.755255,
     "lng": 106.666991,
